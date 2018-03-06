@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'reservations#index'
+  root 'reservations#new'
 
   resources :reservations
 

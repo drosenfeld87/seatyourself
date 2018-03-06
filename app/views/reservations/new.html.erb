@@ -1,0 +1,32 @@
+<h3>Add new reservation</h3>
+
+<%= form_for(@reservation) do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :restaurant_name %>
+    <%= f.text_field :restaurant_name %>
+  </p>
+
+  <p>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :time %>
+    <%= f.number_field :time %>
+  </p>
+
+  <p>
+    <%= f.label :number_of_people %>
+    <%= f.number_field :number_of_people %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
