@@ -1,15 +1,17 @@
 class ReservationsController < ApplicationController
 
   def index
-    @reservation = Reservation.new
+
   end
 
   def new
-
+    @reservation = Reservation.new
   end
 
   def create
     @reservation = Reservation.new
+    # Uncomment below once there is a Restaurant model
+    # @restaurant = Restaurant.find_by(name: params[:reservation][:restaurant_name])
 
     @reservation.email = params[:reservation][:email]
     @reservation.restaurant_name = params[:reservation][:restaurant_name]
