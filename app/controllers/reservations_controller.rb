@@ -28,6 +28,11 @@ class ReservationsController < ApplicationController
       flash[:alert] = "There is not enough space for your party."
       redirect_to root_url
       return
+
+    elsif @reservation.date < Date.today || (@reservation.date == Date.today && @reservation.time <= Time.now.hour)
+      flash[:alert] = "Reservations can't be placed before an hour from now."
+      redirect_to root_url
+      return
     end
 
     if @reservation.save
