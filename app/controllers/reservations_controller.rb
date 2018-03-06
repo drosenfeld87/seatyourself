@@ -19,9 +19,15 @@ class ReservationsController < ApplicationController
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
 
-    unless @reservation.time < 16 && @reservation.time >= 23
+    if @reservation.time < 16 || @reservation.time >= 23
       flash[:alert] = "The reservation time must fall within open hours"
       redirect_to root_url
+      return
+
+    elsif @reservation.number_of_people > 10
+      flash[:alert] = "There is not enough space for your party."
+      redirect_to root_url
+      return
     end
 
     if @reservation.save
