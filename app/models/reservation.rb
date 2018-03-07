@@ -12,8 +12,6 @@ class Reservation < ApplicationRecord
     end
   end
 
-  # if @reservation.time < 16 || @reservation.time >= 23
-  #   flash[:alert] = "The reservation time must fall within open hours"
   #
   # elsif @reservation.number_of_people > 10
   #   flash[:alert] = "There is not enough space for your party."
