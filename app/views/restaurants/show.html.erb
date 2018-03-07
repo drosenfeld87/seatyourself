@@ -1,0 +1,30 @@
+<h1>Restaurants Show Page</h1>
+
+<%= render 'restaurant', restaurant: @restaurant %>
+
+<%= form_for(@reservation) do |f| %>
+  <%= f.hidden_field :restaurant_name, :value => @restaurant.restaurant_name %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :time %>
+    <%= f.number_field :time %>
+  </p>
+
+  <p>
+    <%= f.label :number_of_people %>
+    <%= f.number_field :number_of_people %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
