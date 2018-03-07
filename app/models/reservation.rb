@@ -1,10 +1,10 @@
 class Reservation < ApplicationRecord
 
   belongs_to :restaurant
-
-  validates :time, presence: true
+  validates :email, :date, :time, :number_of_people, :restaurant_name, presence: true
   validate :restaurant_hours
   validate :party_size
+  validate :valid_date_and_time
 
   def restaurant_hours
     return unless time
@@ -14,6 +14,7 @@ class Reservation < ApplicationRecord
   end
 
  def party_size
+   return unless restaurant
    taken_seats = 0
    restaurant.reservations.each do |reservation|
      if reservation.date == date && reservation.time == time
@@ -26,9 +27,15 @@ class Reservation < ApplicationRecord
    end
  end
 
-  # elsif @reservation.number_of_people > 10
-  #   flash[:alert] = "There is not enough space for your party."
-  #
+def valid_date_and_time
+  return unless date
+  if date < Date.today
+    errors.add(:date, "must not be in the past")
+  elsif (date == Date.today && time <= Time.now.hour)
+    errors.add(:time, "must be at least an hour from right now")
+  end
+end
+
   # elsif @reservation.date < Date.today || (@reservation.date == Date.today && @reservation.time <= Time.now.hour)
   #   flash[:alert] = "Reservations can't be placed before an hour from now."
   #   render :new

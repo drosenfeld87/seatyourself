@@ -1,5 +1,7 @@
 <h3>Add new reservation</h3>
 
+<%= render 'error', reservation: @reservation %>
+
 <%= form_for(@reservation) do |f| %>
   <p>
     <%= f.label :email %>
