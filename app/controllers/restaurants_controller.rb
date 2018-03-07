@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
+  before_action :ensure_logged_in, except: [:show, :index]
   before_action :load_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_user_owns_restaurant, only: [:edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
@@ -22,6 +24,7 @@ class RestaurantsController < ApplicationController
     @restaurant.price_range = params[:restaurant][:price_range]
     @restaurant.summary = params[:restaurant][:summary]
     @restaurant.restaurant_url = params[:restaurant][:restaurant_url]
+    @restaurant.user_id = current_user.id
 
     if @restaurant.save
       # if the restaurant gets saved, generate a get request to "/restaurants" (the index)
@@ -68,6 +71,13 @@ class RestaurantsController < ApplicationController
 
   def load_restaurant
      @restaurant = Restaurant.find(params[:id])
+  end
+
+  def ensure_user_owns_restaurant
+    unless current_user == @restaurant.user_id
+      flash[:alert] = "You are not the owner of this restaurant, please log in with correct ID."
+      redirect_to new_sessions_path
+    end
   end
 
 end
