@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    # binding.pry
     # Uncomment below once there is a Restaurant model
 
     @reservation.email = params[:reservation][:email]
