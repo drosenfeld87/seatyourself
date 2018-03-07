@@ -4,6 +4,7 @@ class Reservation < ApplicationRecord
 
   validates :time, presence: true
   validate :restaurant_hours
+  validate :party_size
 
   def restaurant_hours
     return unless time
@@ -12,7 +13,19 @@ class Reservation < ApplicationRecord
     end
   end
 
-  #
+ def party_size
+   taken_seats = 0
+   restaurant.reservations.each do |reservation|
+     if reservation.date == date && reservation.time == time
+       taken_seats += reservation.number_of_people
+     end
+   end
+   remaining_seats = restaurant.capacity - taken_seats
+   if number_of_people > remaining_seats
+     errors.add(:number_of_people, "must be smaller")
+   end
+ end
+
   # elsif @reservation.number_of_people > 10
   #   flash[:alert] = "There is not enough space for your party."
   #
