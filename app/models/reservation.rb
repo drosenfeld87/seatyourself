@@ -1,5 +1,7 @@
 class Reservation < ApplicationRecord
 
+  belongs_to :restaurant
+
   validates :time, presence: true
   validate :restaurant_hours
 
