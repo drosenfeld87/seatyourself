@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
-
+  belongs_to :user
   belongs_to :restaurant
   validates :email, :date, :time, :number_of_people, :restaurant_name, presence: true
   validate :restaurant_hours
@@ -8,7 +8,7 @@ class Reservation < ApplicationRecord
 
   def restaurant_hours
     return unless time
-    
+
     if time < restaurant.hours_open || time >= restaurant.hours_closed
       errors.add(:time, "must fall within open hours")
     end

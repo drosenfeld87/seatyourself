@@ -4,7 +4,8 @@ class ReservationsController < ApplicationController
   before_action :load_reservation, only: [:new, :create]
 
   def index
-
+    @user = User.find(session[:user_id])
+    @reservations  = @user.reservations
   end
 
   def new

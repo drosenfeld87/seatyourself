@@ -15,6 +15,9 @@
       <%= link_to 'Logout', sessions_path, method: :delete %>
       |
       <%= link_to 'Add Restaurant', new_restaurant_path %>
+      |
+      <%= link_to 'My Reservations', users_reservations_path %>
+
 
     <% else %>
       <%= link_to 'New User', new_users_path %>
