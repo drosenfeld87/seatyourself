@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306212743) do
+ActiveRecord::Schema.define(version: 20180306214547) do
 
   create_table "reservations", force: :cascade do |t|
     t.string   "email"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20180306212743) do
     t.integer  "number_of_people"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string   "restaurant_name"
+    t.integer  "hours_open"
+    t.integer  "hours_closed"
+    t.integer  "capacity"
+    t.string   "url"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

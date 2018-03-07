@@ -1,16 +1,17 @@
-### MUST HAVE ###
 1. As a visitor, I want to be able to make a reservation
+
+### MUST HAVE ###
+2. As a visitor, when I click on a restaurant, I am presented with:
+address
+neighbourhood
+price range
+summary
+menu
+*** a list of available time slots
 3. As a visitor, when I go to the homepage, I am presented with a list of restaurants.
 6. As a customer, when I go to a restaurant's page, I can make a reservation for the time and party size of my choice.
 
 ### NICE TO HAVE ###
-2. As a visitor, when I click on a restaurant, I am presented with:
-      address
-      neighbourhood
-      price range
-      summary
-      menu
-      a list of available time slots
 4. As a visitor, I want to sign up for a customer account so that I can make reservations online.
 5. As a user I can login and logout.
 7. As a customer I can go to a page to see a list of the reservations I’ve booked.
