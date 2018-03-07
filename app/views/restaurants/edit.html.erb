@@ -1,0 +1,7 @@
+<h1>Edit Restaurant</h1>
+
+<p>
+  <%= link_to("Back", "/restaurants/#{@restaurant.id}") %>
+</p>
+
+<%= render 'restaurant_form', restaurant: @restaurant %>
