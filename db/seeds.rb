@@ -24,3 +24,16 @@ reservations = Reservation.create([
 
   {email: 'super@nova@gmail.com', restaurant_name: 'Terroni ADELAIDE', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant5.id}
   ])
+
+User.destroy_all
+users = User.create([
+  {email: "dmitry@gmail.com", password: "test", password_confirmation: "test"},
+
+  {email: "alex@gmail.com", password: "test", password_confirmation: "test"},
+
+  {email: "debbie@gmail.com", password: "test", password_confirmation: "test"},
+
+  {email: "bill@gmail.com", password: "test", password_confirmation: "test"},
+
+  {email: "sean@gmail.com", password: "test", password_confirmation: "test"},
+  ])
