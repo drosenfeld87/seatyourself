@@ -8,6 +8,21 @@
 </head>
 <body>
 
+  <p>
+    <% if current_user %>
+      Hello <%= current_user.email %>!
+
+      <%= link_to 'Logout', sessions_path, method: :delete %>
+      |
+      <%= link_to 'Add Restaurant', new_restaurant_path %>
+
+    <% else %>
+      <%= link_to 'New User', new_users_path %>
+      |
+      <%= link_to 'Login', new_sessions_path %>
+    <% end %>
+  </p>
+
   <% if flash[:notice] %>
    <p class=“notice”><%= flash[:notice] %></p>
  <% end %>
