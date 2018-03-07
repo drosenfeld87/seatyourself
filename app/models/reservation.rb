@@ -7,7 +7,7 @@ class Reservation < ApplicationRecord
 
   def restaurant_hours
     return unless time
-    if time < 16 || time >= 23
+    if time < restaurant.hours_open || time >= restaurant.hours_closed
       errors.add(:time, "must fall within open hours")
     end
   end
