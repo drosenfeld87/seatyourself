@@ -1,24 +1,25 @@
 class ReservationsController < ApplicationController
 
+  before_action :load_restaurants, only: [:new, :create]
+  before_action :load_reservation, only: [:new, :create]
+
   def index
 
   end
 
   def new
-    @reservation = Reservation.new
-    @restaurants = Restaurant.all
+
   end
 
   def create
-    @reservation = Reservation.new
     # Uncomment below once there is a Restaurant model
-    # @restaurant = Restaurant.find_by(name: params[:reservation][:restaurant_name])
 
     @reservation.email = params[:reservation][:email]
     @reservation.restaurant_name = params[:reservation][:restaurant_name]
     @reservation.date = params[:reservation][:date]
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
+    @reservation.restaurant = Restaurant.find_by(restaurant_name: params[:reservation][:restaurant_name])
 
     if @reservation.save
       flash[:alert] = "Congratulations! Your email confirmation is on the way."
@@ -43,6 +44,14 @@ class ReservationsController < ApplicationController
 
   def destroy
 
+  end
+
+  def load_restaurants
+    @restaurants = Restaurant.all
+  end
+
+  def load_reservation
+    @reservation = Reservation.new
   end
 
 end
