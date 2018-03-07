@@ -30,3 +30,9 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+<h1>Restaurant List</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <%= render '/restaurants/restaurant', restaurant: restaurant %>
+<% end %>
