@@ -1,7 +1,12 @@
 <div class="restaurant">
   <p><%= link_to(image_tag(restaurant.url), restaurant_path(restaurant)) %> </p>
-  <p><%= restaurant.restaurant_name %></p>
+  <strong><p><%= restaurant.restaurant_name %></p></strong>
   <p>Open: <%= restaurant.hours_open %></p>
   <p>Close: <%= restaurant.hours_closed %></p>
   <p>Capacity: <%= restaurant.capacity %></p>
-</div>
+  <p>Address: <%= restaurant.address %></p>
+  <p>Neighbourhood: <%= restaurant.neighbourhood %></p>
+  <p>Price Range: <%= restaurant.price_range %></p>
+  <p>Summary: <%= restaurant.summary %></p>
+  <p>Restaurant URL: <%= restaurant.restaurant_url %></p>
+  <hr>

@@ -20,4 +20,8 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @restaurant = Restaurant.where(user_id: session[:user_id])
+  end
+
 end
