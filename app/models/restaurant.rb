@@ -2,6 +2,8 @@ class Restaurant < ApplicationRecord
 
   has_many :reservations
 
+  belongs_to :user
+
   validates :restaurant_name, :url, :hours_open, :hours_closed, :capacity, :address, :neighbourhood, :price_range, :summary, :restaurant_url, presence: true
 
   validate :restaurant_hours
