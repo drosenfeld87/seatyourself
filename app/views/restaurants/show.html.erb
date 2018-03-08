@@ -6,6 +6,16 @@
 
 <%= render '/reservations/error', reservation: @reservation %>
 
+******************</br>
+<h3>Book a Reservation</h3>
+<p>Available time slots for today, <%= Date.today %>:</p>
+<% @restaurant.available_time_slots(Date.today).each do |time_slot| %>
+  <div class="time_slot">
+    <%= time_slot %>:00 PM
+  </div>
+<% end %>
+
+
 <%= form_for(@reservation) do |f| %>
   <%= f.hidden_field :restaurant_name, :value => @restaurant.restaurant_name %>
   <p>
