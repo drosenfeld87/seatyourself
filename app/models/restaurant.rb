@@ -27,7 +27,7 @@ class Restaurant < ApplicationRecord
         end
       end
 
-      capacity - number_of_people_at_this_hour >= 2
+      capacity - number_of_people_at_this_hour >= min_size
     end
   end
 
