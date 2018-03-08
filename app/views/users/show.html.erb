@@ -8,7 +8,7 @@
   <ul>
     <li><strong><%= restaurant.restaurant_name %></strong></li>
     <ul>
-      <%restaurant.reservations.each do |reservation| %>
+      <%restaurant.next_week_reservations.each do |reservation| %>
       <li>Date: <%= reservation.date %></li>
       <li>Time: <%= reservation.time %>:00h</li>
       <li>Party size: <%= reservation.number_of_people %></li>

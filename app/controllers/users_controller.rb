@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.where(user_id: session[:user_id])
+    @restaurant = Restaurant.where(user_id: session[:user_id]).order(:restaurant_name)
   end
 
 end

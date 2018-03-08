@@ -13,8 +13,6 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    # binding.pry
-    # Uncomment below once there is a Restaurant model
 
     @reservation.email = params[:reservation][:email]
     @reservation.restaurant_name = params[:reservation][:restaurant_name]
@@ -22,6 +20,7 @@ class ReservationsController < ApplicationController
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
     @reservation.restaurant = Restaurant.find_by(restaurant_name: params[:reservation][:restaurant_name])
+    @reservation.user = current_user
 
     if @reservation.save
       flash[:alert] = "Congratulations! Your email confirmation is on the way."
