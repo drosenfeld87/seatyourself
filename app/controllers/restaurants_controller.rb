@@ -16,6 +16,8 @@ class RestaurantsController < ApplicationController
 
     @restaurant.restaurant_name = params[:restaurant][:restaurant_name]
     @restaurant.capacity = params[:restaurant][:capacity]
+    @restaurant.min_size = params[:restaurant][:min_size]
+    @restaurant.max_size = params[:restaurant][:max_size]
     @restaurant.hours_open = params[:restaurant][:hours_open]
     @restaurant.hours_closed = params[:restaurant][:hours_closed]
     @restaurant.url = params[:restaurant][:url]
@@ -47,6 +49,8 @@ class RestaurantsController < ApplicationController
   def update
     @restaurant.restaurant_name = params[:restaurant][:restaurant_name]
     @restaurant.capacity = params[:restaurant][:capacity]
+    @restaurant.min_size = params[:restaurant][:min_size]
+    @restaurant.max_size = params[:restaurant][:max_size]
     @restaurant.hours_open = params[:restaurant][:hours_open]
     @restaurant.hours_closed = params[:restaurant][:hours_closed]
     @restaurant.url = params[:restaurant][:url]

@@ -31,4 +31,8 @@ class Restaurant < ApplicationRecord
     end
   end
 
+  def next_week_reservations
+    reservations.where(Date:(Date.today..Date.today + 1.week)) 
+  end
+
 end

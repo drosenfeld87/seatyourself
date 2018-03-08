@@ -8,5 +8,5 @@
   <p>Neighbourhood: <%= restaurant.neighbourhood %></p>
   <p>Price Range: <%= restaurant.price_range %></p>
   <p>Summary: <%= restaurant.summary %></p>
-  <p>Restaurant URL: <%= restaurant.restaurant_url %></p>
+  <p>Restaurant URL: <%= link_to "#{restaurant.restaurant_name}", "http://#{restaurant.restaurant_url}" %></p>
   <hr>
