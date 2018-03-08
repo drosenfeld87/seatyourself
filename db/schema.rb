@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307213222) do
+ActiveRecord::Schema.define(version: 20180308182604) do
 
   create_table "reservations", force: :cascade do |t|
     t.string   "email"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20180307213222) do
     t.text     "summary"
     t.string   "restaurant_url"
     t.integer  "user_id"
+    t.integer  "min_size"
+    t.integer  "max_size"
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
