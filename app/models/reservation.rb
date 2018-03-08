@@ -1,10 +1,12 @@
 class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :restaurant
+
   validates :email, :date, :time, :number_of_people, :restaurant_name, presence: true
   validate :restaurant_hours
-  validate :party_size
+  validate :has_capacity
   validate :valid_date_and_time
+  validate :party_size
 
   def restaurant_hours
     return unless time
@@ -14,7 +16,7 @@ class Reservation < ApplicationRecord
     end
   end
 
- def party_size
+ def has_capacity
    return unless restaurant && number_of_people
    taken_seats = 0
 
@@ -29,6 +31,13 @@ class Reservation < ApplicationRecord
      errors.add(:number_of_people, "must be smaller")
    end
 
+ end
+
+ def party_size
+   return unless number_of_people
+   unless number_of_people >= restaurant.min_size && number_of_people <= restaurant.max_size
+     errors.add(:number_of_people, "must be between #{restaurant.min_size} and #{restaurant.max_size}")
+   end
  end
 
 def valid_date_and_time
