@@ -5,7 +5,7 @@ class Restaurant < ApplicationRecord
   belongs_to :user
   # belongs_to :visited, :polymorphic => true
 
-  validates :restaurant_name, :url, :hours_open, :hours_closed, :capacity, :address, :neighbourhood, :price_range, :summary, :restaurant_url, presence: true
+  validates :restaurant_name, :url, :hours_open, :hours_closed, :capacity, :address, :neighbourhood, :price_range, :summary, :restaurant_url, :min_size, :max_size, presence: true
 
   validate :restaurant_hours
 
@@ -27,7 +27,7 @@ class Restaurant < ApplicationRecord
         end
       end
 
-      capacity - number_of_people_at_this_hour >= 2
+      capacity - number_of_people_at_this_hour >= min_size
     end
   end
 

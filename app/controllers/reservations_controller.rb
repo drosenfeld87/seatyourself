@@ -24,6 +24,13 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       flash[:alert] = "Congratulations! Your email confirmation is on the way."
+
+      if current_user
+        user = User.find(session[:user_id])
+        user.loyalty_points += 10
+        user.save
+      end
+
       redirect_to root_url
     else
       render :new

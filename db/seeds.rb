@@ -1,14 +1,14 @@
 User.destroy_all
-dmitry = User.create(email: "dmitry@gmail.com", password: "test", password_confirmation: "test")
+dmitry = User.create(email: "dmitry@gmail.com", password: "test", password_confirmation: "test", loyalty_points: 0)
 
-alex = User.create(email: "alex@gmail.com", password: "test", password_confirmation: "test")
+alex = User.create(email: "alex@gmail.com", password: "test", password_confirmation: "test", loyalty_points: 0)
 
 
-debbie = User.create(email: "debbie@gmail.com", password: "test", password_confirmation: "test")
+debbie = User.create(email: "debbie@gmail.com", password: "test", password_confirmation: "test", loyalty_points: 0)
 
-bill = User.create(email: "bill@gmail.com", password: "test", password_confirmation: "test")
+bill = User.create(email: "bill@gmail.com", password: "test", password_confirmation: "test", loyalty_points: 0)
 
-sean = User.create(email: "sean@gmail.com", password: "test", password_confirmation: "test")
+sean = User.create(email: "sean@gmail.com", password: "test", password_confirmation: "test", loyalty_points: 0)
 
 Restaurant.destroy_all
 restaurant1 = Restaurant.create(restaurant_name: 'Reds Wine Tavern', hours_open: 16, hours_closed: 23, capacity: 50, min_size: 2, max_size: 10, url: 'https://resizer.otstatic.com/v2/profiles/legacy/3584.jpg', address: "Toronto", neighbourhood: "Little Italy", price_range: "$$", summary: "Great place to eat", restaurant_url: "google.com", user_id: dmitry.id)
