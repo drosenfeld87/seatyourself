@@ -5,7 +5,7 @@ class ReservationsController < ApplicationController
 
   def index
     @user = User.find(session[:user_id])
-    @reservations  = @user.reservations
+    @reservations = @user.reservations
   end
 
   def new

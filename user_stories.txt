@@ -15,7 +15,9 @@
 9. As a customer, if I try to make a reservation at a time when a restaurant is already at max capacity, the reservation will not be made and I will be shown a message ndicating why.
 10. As a customer, if I try to make a reservation for a date in the past, the reservation will not be made and I will be shown a message indicating why.
 11. As a customer, when I make a reservation at a restaurant, I want to receive loyalty points.
+12. As a customer, when I go to my profile, I want to see my loyalty points.
 13. As a customer, when I make a reservation, I want to be shown a confirmation message with the details of my reservation.
+14. As a restaurant owner, when I go to my profile, I want to see a list of upcoming reservations for the next week.
 16. As a restaurant owner, when I go to my restaurant's edit page, I can set the opening and closing times of my restaurant.
 17. As a restaurant owner, when I go to my restaurant's edit page, I can set the maximum capacity of my restaurant.
 18. As a restaurant owner, when I go to my restaurant's edit page, I can set the minimum and maximum party size that a reservation can be made for.
@@ -28,6 +30,4 @@
 ### NICE TO HAVE ###
 
 ### HAPPY TO HAVE ###
-12. As a customer, when I go to my profile, I want to see my loyalty points.
-14. As a restaurant owner, when I go to my profile, I want to see a list of upcoming reservations for the next week.
 15. As a restaurant owner, when I go to my profile, I want to see a list of customers who have made reservations at my restaurant in order of loyalty points.
