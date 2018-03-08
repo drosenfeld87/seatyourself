@@ -1,9 +1,9 @@
 class Restaurant < ApplicationRecord
 
   has_many :reservations
+  has_many :visitors, :through => :reservations, :source => :user
 
   belongs_to :user
-  # belongs_to :visited, :polymorphic => true
 
   validates :restaurant_name, :url, :hours_open, :hours_closed, :capacity, :address, :neighbourhood, :price_range, :summary, :restaurant_url, :min_size, :max_size, presence: true
 
@@ -32,7 +32,7 @@ class Restaurant < ApplicationRecord
   end
 
   def next_week_reservations
-    reservations.where(Date:(Date.today..Date.today + 1.week)) 
+    reservations.where(Date:(Date.today..Date.today + 1.week))
   end
 
 end

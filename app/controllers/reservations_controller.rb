@@ -6,6 +6,8 @@ class ReservationsController < ApplicationController
   def index
     @user = User.find(session[:user_id])
     @reservations = @user.reservations
+    @customers = @user.customers
+    # User.all.order()
   end
 
   def new
@@ -20,7 +22,7 @@ class ReservationsController < ApplicationController
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
     @reservation.restaurant = Restaurant.find_by(restaurant_name: params[:reservation][:restaurant_name])
-    @reservation.user = current_user
+    @reservation.user = params[:reservation][:email]
 
     if @reservation.save
       flash[:alert] = "Congratulations! Your email confirmation is on the way. Here are the details:"

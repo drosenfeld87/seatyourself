@@ -18,6 +18,7 @@
 12. As a customer, when I go to my profile, I want to see my loyalty points.
 13. As a customer, when I make a reservation, I want to be shown a confirmation message with the details of my reservation.
 14. As a restaurant owner, when I go to my profile, I want to see a list of upcoming reservations for the next week.
+15. As a restaurant owner, when I go to my profile, I want to see a list of customers who have made reservations at my restaurant in order of loyalty points.
 16. As a restaurant owner, when I go to my restaurant's edit page, I can set the opening and closing times of my restaurant.
 17. As a restaurant owner, when I go to my restaurant's edit page, I can set the maximum capacity of my restaurant.
 18. As a restaurant owner, when I go to my restaurant's edit page, I can set the minimum and maximum party size that a reservation can be made for.
@@ -30,4 +31,3 @@
 ### NICE TO HAVE ###
 
 ### HAPPY TO HAVE ###
-15. As a restaurant owner, when I go to my profile, I want to see a list of customers who have made reservations at my restaurant in order of loyalty points.
