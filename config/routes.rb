@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :restaurants
   resources :reservations
 
-  resource :users, only: %i(new create) do
+  resource :users, only: %i(new create show) do
     resources :reservations
   end
 

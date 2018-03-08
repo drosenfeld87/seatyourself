@@ -1,0 +1,25 @@
+<% if @restaurant.any? %>
+
+
+<% @restaurant.each do |restaurant| %>
+
+
+<div class="info">
+  <ul>
+    <li><strong><%= restaurant.restaurant_name %></strong></li>
+    <ul>
+      <%restaurant.reservations.each do |reservation| %>
+      <li>Date: <%= reservation.date %></li>
+      <li>Time: <%= reservation.time %>:00h</li>
+      <li>Party size: <%= reservation.number_of_people %></li>
+      <hr>
+      <% end %>
+    </ul>
+  </ul>
+</div>
+<% end %>
+
+<% else %>
+
+<p>You do not own any restaurants</p>
+<% end %>
