@@ -24,7 +24,11 @@ class ReservationsController < ApplicationController
     @reservation.restaurant = Restaurant.find_by(restaurant_name: params[:reservation][:restaurant_name])
 
     if @reservation.save
-      flash[:alert] = "Congratulations! Your email confirmation is on the way."
+      flash[:alert] = "Congratulations! Your email confirmation is on the way. Here are the details:"
+      flash[:alert1] = "Restaurant: #{@reservation.restaurant_name}"
+      flash[:alert2] = "Date: #{@reservation.date}"
+      flash[:alert3] = "Time: #{@reservation.time}:00"
+      flash[:alert4] = "Address: #{@reservation.restaurant.address}"
 
       if current_user
         user = User.find(session[:user_id])
