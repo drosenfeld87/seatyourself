@@ -3,7 +3,7 @@ class Restaurant < ApplicationRecord
   has_many :reservations
   has_many :visitors, :through => :reservations, :source => :user
 
-  belongs_to :user
+  belongs_to :owner, class_name: "User", foreign_key: 'user_id'
 
   validates :restaurant_name, :url, :hours_open, :hours_closed, :capacity, :address, :neighbourhood, :price_range, :summary, :restaurant_url, :min_size, :max_size, presence: true
 
