@@ -1,3 +1,12 @@
 // Place all the styles related to the Restaraunts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.restaurant {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+    p {
+      display: block;
+      padding: 10px;
+    }
+}

@@ -1,44 +1,44 @@
 <div class="container">
-  <div class="new-reservation">
-    <h3>Reserve a Table Now!</h3>
+  <h3 id="header">Reserve a Table Now!</h3>
+    <div class="new-reservation">
 
-    <%= render 'error', reservation: @reservation %>
-      <%= form_for(@reservation) do |f| %>
-        <p>
-          <%= f.hidden_field :email %>
-          <%= f.email_field :email, placeholder: "Email" %>
-        </p>
+      <%= render 'error', reservation: @reservation %>
+        <%= form_for(@reservation) do |f| %>
+          <p>
+            <%= f.hidden_field :email %>
+            <%= f.email_field :email, placeholder: "Email" %>
+          </p>
 
-        <p>
-          <%= f.hidden_field :restaurant_name %>
-          <%= f.text_field :restaurant_name, placeholder: "Restaurant" %>
-        </p>
+          <p>
+            <%= f.hidden_field :restaurant_name %>
+            <%= f.text_field :restaurant_name, placeholder: "Restaurant" %>
+          </p>
 
-        <p>
-          <%= f.hidden_field :date  %>
-          <%= f.date_field :date %>
-        </p>
+          <p>
+            <%= f.hidden_field :date  %>
+            <%= f.date_field :date %>
+          </p>
 
-        <p>
-          <%= f.hidden_field :time %>
-          <%= f.number_field :time, placeholder: "Time" %>
-        </p>
+          <p>
+            <%= f.hidden_field :time %>
+            <%= f.number_field :time, placeholder: "Time" %>
+          </p>
 
-        <p>
-          <%= f.hidden_field :number_of_people %>
-          <%= f.number_field :number_of_people, placeholder: "2 people" %>
-        </p>
+          <p>
+            <%= f.hidden_field :number_of_people %>
+            <%= f.number_field :number_of_people, placeholder: "2 people" %>
+          </p>
 
-        <p>
-          <%= f.submit %>
-        </p>
-      <% end %>
-  </div>
+          <div class="button">
+            <%= f.submit %>
+          </div>
+    
+        <% end %>
+      </div>
 </div>
 
+<h1 id="header">Featured Restaurants</h1>
   <div class="all-restaurants">
-    <h1>Featured Restaurants</h1>
-
     <% @restaurants.each do |restaurant| %>
       <%= render '/restaurants/restaurant', restaurant: restaurant %>
     <% end %>

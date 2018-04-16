@@ -1,4 +1,4 @@
-<h1>SeatYourself Sign Up</h1>
+<h1>Sign Up</h1>
 
 <% if @user.errors.any? %>
   <ul>
@@ -35,6 +35,8 @@
     <%= f.password_field :password_confirmation %>
   </div>
 
-  <%= f.submit 'Sign Up' %>
+  <div class="button">
+    <%= f.submit 'Sign Up' %>
+  </div>
 
 <% end %>
