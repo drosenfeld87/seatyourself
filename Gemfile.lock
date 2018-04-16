@@ -171,7 +171,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bcrypt (~> 3.1.7)
-  bootstrap-sass (~> 3.3.7)
+  bootstrap-sass (= 3.3.7)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)

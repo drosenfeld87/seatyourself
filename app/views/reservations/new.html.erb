@@ -1,45 +1,45 @@
-<div class="new-reservation">
-  <h3>Add new reservation</h3>
+<div class="container">
+  <div class="new-reservation">
+    <h3>Reserve a Table Now!</h3>
 
-  <%= render 'error', reservation: @reservation %>
+    <%= render 'error', reservation: @reservation %>
+      <%= form_for(@reservation) do |f| %>
+        <p>
+          <%= f.hidden_field :email %>
+          <%= f.email_field :email, placeholder: "Email" %>
+        </p>
 
-  <%= form_for(@reservation) do |f| %>
-    <p>
-      <%= f.label :email %>
-      <%= f.email_field :email %>
-    </p>
+        <p>
+          <%= f.hidden_field :restaurant_name %>
+          <%= f.text_field :restaurant_name, placeholder: "Restaurant" %>
+        </p>
 
-    <p>
-      <%= f.label :restaurant_name %>
-      <%= f.text_field :restaurant_name %>
-    </p>
+        <p>
+          <%= f.hidden_field :date  %>
+          <%= f.date_field :date %>
+        </p>
 
-    <p>
-      <%= f.label :date %>
-      <%= f.date_field :date %>
-    </p>
+        <p>
+          <%= f.hidden_field :time %>
+          <%= f.number_field :time, placeholder: "Time" %>
+        </p>
 
-    <p>
-      <%= f.label :time %>
-      <%= f.number_field :time %>
-    </p>
+        <p>
+          <%= f.hidden_field :number_of_people %>
+          <%= f.number_field :number_of_people, placeholder: "2 people" %>
+        </p>
 
-    <p>
-      <%= f.label :number_of_people %>
-      <%= f.number_field :number_of_people %>
-    </p>
-
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+  </div>
 </div>
 
+  <div class="all-restaurants">
+    <h1>Featured Restaurants</h1>
 
-<div class="all-restaurants">
-  <h1>Featured Restaurants</h1>
-
-  <% @restaurants.each do |restaurant| %>
-    <%= render '/restaurants/restaurant', restaurant: restaurant %>
-  <% end %>
-</div>
+    <% @restaurants.each do |restaurant| %>
+      <%= render '/restaurants/restaurant', restaurant: restaurant %>
+    <% end %>
+  </div>
