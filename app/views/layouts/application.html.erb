@@ -5,44 +5,45 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto" rel="stylesheet">
 </head>
-<body>
+  <body>
 
-  <p>
-    <% if current_user %>
-      Hello <%= current_user.email %>!
+    <div class="navbar">
+      <% if current_user %>
+        Hello <%= current_user.first_name %>!
 
-      <%= link_to 'Logout', sessions_path, method: :delete %>
-      |
-      <%= link_to 'Add Restaurant', new_restaurant_path %>
-      |
-      <%= link_to 'My Profile', users_reservations_path %>
-      |
-      <%= link_to 'My Restaurants', users_path %>
-      |
-      <%= link_to"Back to Restaurants", restaurants_path %>
+        <%= link_to 'Logout', sessions_path, method: :delete %>
+        |
+        <%= link_to 'Add Restaurant', new_restaurant_path %>
+        |
+        <%= link_to 'My Profile', users_reservations_path %>
+        |
+        <%= link_to 'My Restaurants', users_path %>
+        |
+        <%= link_to"Back to Restaurants", restaurants_path %>
 
 
-    <% else %>
-      <%= link_to 'New User', new_users_path %>
-      |
-      <%= link_to 'Login', new_sessions_path %>
-    <% end %>
-  </p>
+      <% else %>
+        <%= link_to 'Sign Up', new_users_path %>
+        |
+        <%= link_to 'Sign In', new_sessions_path %>
+      <% end %>
+    </div>
 
-  <% if flash[:notice] %>
-   <p class=“notice”><%= flash[:notice] %></p>
- <% end %>
+      <% if flash[:notice] %>
+       <p class=“notice”><%= flash[:notice] %></p>
+     <% end %>
 
- <% if flash[:alert] %>
-   <p class=“alert”><%= flash[:alert] %></p>
-   <p class=“alert”><%= flash[:alert1] %></p>
-   <p class=“alert”><%= flash[:alert2] %></p>
-   <p class=“alert”><%= flash[:alert3] %></p>
-   <p class=“alert”><%= flash[:alert4] %></p>
- <% end %>
+     <% if flash[:alert] %>
+       <p class=“alert”><%= flash[:alert] %></p>
+       <p class=“alert”><%= flash[:alert1] %></p>
+       <p class=“alert”><%= flash[:alert2] %></p>
+       <p class=“alert”><%= flash[:alert3] %></p>
+       <p class=“alert”><%= flash[:alert4] %></p>
+     <% end %>
 
-<%= yield %>
+       <%= yield %>
 
-</body>
+    </body>
 </html>

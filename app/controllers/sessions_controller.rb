@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       # Put on the wristband
       session[:user_id] = u.id
       # flash[:notice] = 'Login Succesful'
-      flash[:notice] = "You have successfully login as #{u.email}!"
+      flash[:notice] = "You have successfully login as #{u.first_name}!"
       redirect_to root_url
     else
       # flash[:error] = 'Email or Password invalid'
