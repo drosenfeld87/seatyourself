@@ -20,6 +20,7 @@ restaurant4 = Restaurant.create(restaurant_name: 'Canoe Restaurant and Bar', hou
 
 restaurant5 = Restaurant.create(restaurant_name: 'Terroni ADELAIDE', hours_open: 14, hours_closed: 20, capacity: 20, min_size: 2, max_size: 10, url: 'https://resizer.otstatic.com/v2/profiles/legacy/73816.jpg', address: "Toronto", neighbourhood: "Little Italy", price_range: "$$", summary: "Great place to eat", restaurant_url: "terroni.com/terroni-toronto", user_id: dmitry.id)
 
+
 Reservation.destroy_all
 reservations = Reservation.create([
   {email: 'super@nova@gmail.com', restaurant_name: 'Reds Wine Tavern', date: Date.today + rand(30), time: 17, number_of_people: 2, restaurant_id: restaurant1.id, user_id: dmitry.id},
@@ -30,5 +31,5 @@ reservations = Reservation.create([
 
   {email: 'super@nova@gmail.com', restaurant_name: 'Canoe Restaurant and Bar', date: Date.today + rand(30), time: 17, number_of_people: 2, restaurant_id: restaurant4.id, user_id: debbie.id},
 
-  {email: 'super@nova@gmail.com', restaurant_name: 'Terroni ADELAIDE', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant5.id, user_id: alex.id}
-  ])
+  {email: 'super@nova@gmail.com', restaurant_name: 'Terroni ADELAIDE', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant5.id, user_id: alex.id},
+])

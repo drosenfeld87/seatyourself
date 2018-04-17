@@ -10,3 +10,19 @@
       padding: 10px;
     }
 }
+
+.all-restaurants {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  }
+
+.restaurant-show {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  justify-content: center;
+}
