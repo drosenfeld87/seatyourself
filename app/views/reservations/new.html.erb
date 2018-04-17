@@ -1,6 +1,6 @@
-<div class="container">
-  <h3 id="header">Reserve a Table Now!</h3>
+<div class="hero-image">
     <div class="new-reservation">
+      <h3 id="header">Reserve a Table Now!</h3>
 
       <%= render 'error', reservation: @reservation %>
         <%= form_for(@reservation) do |f| %>
@@ -32,7 +32,7 @@
           <div class="button">
             <%= f.submit %>
           </div>
-    
+
         <% end %>
       </div>
 </div>

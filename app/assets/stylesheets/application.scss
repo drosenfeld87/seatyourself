@@ -15,6 +15,7 @@
  */
 
  $darkpink: #730046;
+ $hero-height: 50vh;
 
 
 * {
@@ -35,18 +36,31 @@ h1, h2, h3 {
 }
 
 .button {
-  color: red;
+  color: #6666;
+  width: 100px;
+  height: 50px;
 }
 
 .navbar {
+  // position:fixed;
   justify-content: flex-end;
   min-height: 4rem;
 }
 
-.container {
+.hero-image {
+  background: image-url("hero-image.jpg") 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+  margin: 0 20px;
     .new-reservation {
+      background: white;
+      border-radius: 10px;
+      padding: 0 20px 0 20px;
+      box-shadow: 0px 8px 5px rgba(0, 0, 0, .4);
       p, h3 {
         display: inline-block;
         text-align: center;
