@@ -31,7 +31,7 @@
         |
         <%= link_to 'Sign In', new_sessions_path %>
         |
-        <%= link_to("Back to Restaurants", restaurants_path) %> 
+        <%= link_to("Back to Restaurants", restaurants_path) %>
       <% end %>
     </div>
 
@@ -46,8 +46,11 @@
        <p class=“alert”><%= flash[:alert3] %></p>
        <p class=“alert”><%= flash[:alert4] %></p>
      <% end %>
-
+     <div class="container">
        <%= yield %>
-
+     </div>
+      <div class="footer">      
+       <%= render 'layouts/footer' %>
+     </div>
     </body>
 </html>
