@@ -10,47 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body>
-
-    <div class="navbar">
-      <% if current_user %>
-        Hello <%= current_user.first_name %>!
-
-        <%= link_to 'Logout', sessions_path, method: :delete %>
-        |
-        <%= link_to 'Add Restaurant', new_restaurant_path %>
-        |
-        <%= link_to 'My Profile', users_reservations_path %>
-        |
-        <%= link_to 'My Restaurants', users_path %>
-        |
-        <%= link_to"Back to Restaurants", restaurants_path %>
-
-
-      <% else %>
-        <%= link_to 'Sign Up', new_users_path %>
-        |
-        <%= link_to 'Sign In', new_sessions_path %>
-        |
-        <%= link_to("Back to Restaurants", restaurants_path) %>
-      <% end %>
-    </div>
-
-      <% if flash[:notice] %>
-       <p class=“notice”><%= flash[:notice] %></p>
-     <% end %>
-
-     <% if flash[:alert] %>
-       <p class=“alert”><%= flash[:alert] %></p>
-       <p class=“alert”><%= flash[:alert1] %></p>
-       <p class=“alert”><%= flash[:alert2] %></p>
-       <p class=“alert”><%= flash[:alert3] %></p>
-       <p class=“alert”><%= flash[:alert4] %></p>
-     <% end %>
-     <div class="container">
+      <%= render 'layouts/navbar' %>
+      <div>
        <%= yield %>
      </div>
-      <div class="footer">      
-       <%= render 'layouts/footer' %>
-     </div>
+           <%= render 'layouts/footer' %>
+      </div>
     </body>
 </html>

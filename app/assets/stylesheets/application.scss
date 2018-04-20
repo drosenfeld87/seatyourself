@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+ $lightgrey: #A6A5A1;
  $darkpink: #730046;
  $hero-height: 50vh;
 
@@ -28,6 +28,7 @@ body {
     margin: 20px;
     font-family: 'Roboto', sans-serif;
     background-color: #F8F8F0;
+    height: 100%;
 }
 
 #header {
@@ -40,9 +41,13 @@ h1, h2, h3 {
 }
 
 .button {
-  color: #6666;
-  width: 100px;
-  height: 50px;
+  font-family: 'Bree Serif', serif;
+  background-color: $darkpink;
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  width: 75px;
+  height: 40px;
 }
 
 .navbar {
@@ -51,7 +56,7 @@ h1, h2, h3 {
   border-radius: 10px;
   padding: 20px;
   min-height: 4rem;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid $lightgrey;
 }
 
 .hero-image {
@@ -75,28 +80,24 @@ h1, h2, h3 {
       }
     }
 
-
 .footer {
+  display: flow-root;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 1px solid $lightgrey;
   background-color: white;
-  margin-top: 45px;
-  padding-top: 20px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-    small {
-      float: left;
-
-    ul {
-      float: right;
-      list-style: none;
-
+  border-radius: 10px;
+  color: $lightgrey;
+  position: relative;
     ul li {
-      float: left;
-      margin-left: 15px;
+      list-style: none;
+      display: inline;
+      float: right;
     }
-    }
-    }
+      li {
+        padding: 10px;
+      }
 }
-
 
 
 
