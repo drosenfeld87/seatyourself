@@ -34,13 +34,8 @@
           </div>
 
         <% end %>
-
+    </div>
+    <div class="all-restaurants">
+        <%= render 'restaurants/featured-restaurants' %>
     </div>
 </div>
-
-<h1 id="header">Featured Restaurants</h1>
-  <div class="all-restaurants">
-    <% @restaurants.each do |restaurant| %>
-      <%= render '/restaurants/restaurant', restaurant: restaurant %>
-    <% end %>
-  </div>
