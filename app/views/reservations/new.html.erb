@@ -1,43 +1,46 @@
 <div class="hero-image">
-    <div class="new-reservation">
-      <h1 id="header">Reserve a Table Now!</h1>
+  <div class="new-reservation">
+    <h1 id="header">Reserve a Table Now!</h1>
 
-      <%= render 'error', reservation: @reservation %>
-        <%= form_for(@reservation) do |f| %>
-          <p>
-            <%= f.hidden_field :email %>
-            <%= f.email_field :email, placeholder: "Email" %>
-          </p>
+    <%= render 'error', reservation: @reservation %>
+      <%= form_for(@reservation) do |f| %>
+        <p>
+          <%= f.hidden_field :email %>
+          <%= f.email_field :email, placeholder: "Email" %>
+        </p>
 
-          <p>
-            <%= f.hidden_field :restaurant_name %>
-            <%= f.text_field :restaurant_name, placeholder: "Restaurant" %>
-          </p>
+        <p>
+          <%= f.hidden_field :restaurant_name %>
+          <%= f.text_field :restaurant_name, placeholder: "Restaurant" %>
+        </p>
 
-          <p>
-            <%= f.hidden_field :date  %>
-            <%= f.date_field :date %>
-          </p>
+        <p>
+          <%= f.hidden_field :date  %>
+          <%= f.date_field :date %>
+        </p>
 
-          <p>
-            <%= f.hidden_field :time %>
-            <%= f.number_field :time, placeholder: "Time" %>
-          </p>
+        <p>
+          <%= f.hidden_field :time %>
+          <%= f.number_field :time, placeholder: "Time" %>
+        </p>
 
-          <p>
-            <%= f.hidden_field :number_of_people %>
-            <%= f.number_field :number_of_people, placeholder: "2 people" %>
-          </p>
+        <p>
+          <%= f.hidden_field :number_of_people %>
+          <%= f.number_field :number_of_people, placeholder: "2 people" %>
+        </p>
 
-          <div class="button">
-            <%= f.submit %>
+          <div id="reserve-button">
+            <%= f.submit id:"reserve-button"%>
           </div>
 
         <% end %>
-      </div>
+
+    </div>
 </div>
 
 <h1 id="header">Featured Restaurants</h1>
+  <div class="all-restaurants">
     <% @restaurants.each do |restaurant| %>
       <%= render '/restaurants/restaurant', restaurant: restaurant %>
     <% end %>
+  </div>

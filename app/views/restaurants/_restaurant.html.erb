@@ -1,4 +1,3 @@
-<div class="all-restaurants">
   <%= link_to(image_tag(restaurant.url), restaurant_path(restaurant)) %>
   <h4 class="restaurant-name"><%= restaurant.restaurant_name %></h4>
   <p>Open: <%= restaurant.hours_open %></br>
@@ -9,4 +8,3 @@
   Price Range: <%= restaurant.price_range %></br>
   Summary: <%= restaurant.summary %></br>
   Website: <%= link_to "#{restaurant.restaurant_name}", "http://#{restaurant.restaurant_url}" %></p>
-</div>

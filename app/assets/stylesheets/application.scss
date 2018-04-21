@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
     a {
+      color: $darkpink;
       text-decoration: none;
     }
 }
@@ -44,6 +45,7 @@ h1, h2, h3 {
 }
 
 #reserve-button {
+    margin: 0 auto;
     font-family: 'Bree Serif', serif;
     background-color: $darkpink;
     border-radius: 8px;
@@ -75,19 +77,16 @@ h1, h2, h3 {
       display:flex;
       justify-content: space-between;
       align-items: center;
-      a {
-        color: $darkpink;
-        text-decoration: none;
-      }
-      .navbar-divider {
-        margin: 0 1rem;
-      }
+        .navbar-divider {
+          margin: 0 1rem;
+        }
     }
 }
 
 .logo a {
   font-family: 'Bree Serif', serif;
   font-size: 2rem;
+  font-weight: bold;
   color: $darkpink;
 }
 
@@ -113,22 +112,13 @@ h1, h2, h3 {
     }
 
 .footer {
-  display: flow-root;
+  text-align: center;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 60px;
   border-top: 1px solid $lightgrey;
   background-color: white;
   border-radius: 10px;
   color: $lightgrey;
-  position: relative;
-    ul li {
-      list-style: none;
-      display: inline;
-      float: right;
-    }
-      li {
-        padding: 10px;
-      }
 }
 
 
