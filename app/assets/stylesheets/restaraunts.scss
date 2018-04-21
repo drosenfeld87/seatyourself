@@ -12,13 +12,17 @@
 }
 
 .all-restaurants {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  display: flex;
-    p {
-      display: none;
+  display: inline-flex;
+
+    .restaurant-name {
+      margin: 0 auto;
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
     }
+      p {
+        display: none;
+      }
   }
 
 .restaurant-show {
@@ -28,12 +32,4 @@
   border-radius: 10px;
   display: inline-block;
   justify-content: center;
-}
-
-.restaurant-name {
-  position: absolute;
-  top: 50%;
-  font-size: 20px;
-  color: black;
-  font-weight: bold;
 }
