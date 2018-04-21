@@ -1,47 +1,49 @@
-<h1 id="header"><%= @restaurant.restaurant_name %></h1>
-  <div class="restaurant-show">
+<div class="restaurant-show">
 
-  <%= render 'restaurant', restaurant: @restaurant %>
+  <h1 id="header"><%= @restaurant.restaurant_name %></h1>
 
-  <%= render '/reservations/error', reservation: @reservation %>
+    <%= render 'restaurant', restaurant: @restaurant %>
 
-  </div>
-</br>
+    <%= render '/reservations/error', reservation: @reservation %>
 
-******************
-<h3>Book a Reservation</h3>
-  <p>Available time slots for today, <%= Date.today %>:</p>
-  <% @restaurant.available_time_slots(Date.today).each do |time_slot| %>
-    <div class="time_slot">
-      <%= time_slot %>:00 PM
     </div>
+  </br>
+
+  ******************
+  <h3>Book a Reservation</h3>
+    <p>Available time slots for today, <%= Date.today %>:</p>
+    <% @restaurant.available_time_slots(Date.today).each do |time_slot| %>
+      <div class="time_slot">
+        <%= time_slot %>:00 PM
+      </div>
+    <% end %>
+
+
+  <%= form_for(@reservation) do |f| %>
+    <%= f.hidden_field :restaurant_name, :value => @restaurant.restaurant_name %>
+    <p>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </p>
+
+    <p>
+      <%= f.label :date %>
+      <%= f.date_field :date %>
+    </p>
+
+    <p>
+      <%= f.label :time %>
+      <%= f.number_field :time %>
+    </p>
+
+    <p>
+      <%= f.label :number_of_people %>
+      <%= f.number_field :number_of_people %>
+    </p>
+
+    <div class="button">
+      <%= f.submit "Save", :class => "button" %>
+    </div>
+
   <% end %>
-
-
-<%= form_for(@reservation) do |f| %>
-  <%= f.hidden_field :restaurant_name, :value => @restaurant.restaurant_name %>
-  <p>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </p>
-
-  <p>
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </p>
-
-  <p>
-    <%= f.label :time %>
-    <%= f.number_field :time %>
-  </p>
-
-  <p>
-    <%= f.label :number_of_people %>
-    <%= f.number_field :number_of_people %>
-  </p>
-
-  <div class="button">
-    <%= f.submit "Save", :class => "button" %>
-  </div>
-
-<% end %>
+</div>

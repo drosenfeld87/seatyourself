@@ -13,10 +13,13 @@
 
 .all-restaurants {
   display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 
     .restaurant-name {
-      margin: 0 auto;
-      font-size: 20px;
+      font-size: 1.2rem;
+      text-align: center;
       color: black;
       font-weight: bold;
     }
