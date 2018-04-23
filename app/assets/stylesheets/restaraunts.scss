@@ -11,18 +11,29 @@
     }
 }
 
+.restaurant-name {
+  background-color: green;
+  overflow-x: auto;
+  position: absolute;
+  top: 20px;
+  z-index: 100;
+}
+
+.indRest {
+  position: relative;
+  padding-right: 30px;
+}
+
+#featured {
+  display: flex;
+  justify-content: center;
+}
+
 .all-restaurants {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-
-    .restaurant-name {
-      font-size: 1.2rem;
-      text-align: center;
-      color: black;
-      font-weight: bold;
-    }
       p {
         display: none;
       }
@@ -35,7 +46,7 @@
   border-radius: 10px;
   display: inline-block;
   justify-content: center;
-      h4 {
+      .restaurant-name {
         display: none;
       }
 }

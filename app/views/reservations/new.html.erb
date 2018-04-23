@@ -29,13 +29,11 @@
           <%= f.number_field :number_of_people, placeholder: "2 people" %>
         </p>
 
-          <div id="reserve-button">
             <%= f.submit id:"reserve-button"%>
-          </div>
 
         <% end %>
     </div>
-    <div class="all-restaurants">
-        <%= render 'restaurants/featured-restaurants' %>
-    </div>
 </div>
+
+
+  <%= render 'restaurants/featured-restaurants' %>
