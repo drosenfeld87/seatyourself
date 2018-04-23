@@ -1,15 +1,16 @@
-<div class="restaurant-show">
+<h1 class="rest-name-show"><%= @restaurant.restaurant_name %></h1>
 
-  <h1 id="header"><%= @restaurant.restaurant_name %></h1>
+    <div class="restaurant-show">
 
-    <%= render 'restaurant', restaurant: @restaurant %>
+      <%= render 'restaurant', restaurant: @restaurant %>
 
-    <%= render '/reservations/error', reservation: @reservation %>
+      <%= render '/reservations/error', reservation: @reservation %>
 
-    </div>
-  </br>
+</div>
+<hr>
 
-  ******************
+<div class="reservation-form">
+
   <h3>Book a Reservation</h3>
     <p>Available time slots for today, <%= Date.today %>:</p>
     <% @restaurant.available_time_slots(Date.today).each do |time_slot| %>
@@ -45,5 +46,6 @@
       <%= f.submit "Save", :class => "button" %>
     </div>
 
-  <% end %>
+      <% end %>
+
 </div>

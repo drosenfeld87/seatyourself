@@ -2,7 +2,7 @@
   <%= link_to(image_tag(restaurant.url), restaurant_path(restaurant)) %>
   <h4 class="restaurant-name"><%= link_to(restaurant.restaurant_name, restaurant_path(restaurant)) %></h4>
 </div>
-  <p>Open: <%= restaurant.hours_open %></br>
+  <p class="info">Open: <%= restaurant.hours_open %></br>
   Close: <%= restaurant.hours_closed %></br>
   Capacity: <%= restaurant.capacity %></br>
   Address: <%= restaurant.address %></br>

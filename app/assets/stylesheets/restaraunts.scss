@@ -14,6 +14,7 @@
     }
 }
 
+
 .restaurant-name {
   background: white;
   opacity: 0.8;
@@ -48,14 +49,25 @@
       }
   }
 
+.rest-name-show {
+  display: block;
+  padding: 20px 20px 0;
+  margin: 0 auto;
+
+}
+
 .restaurant-show {
   background-color: white;
-  margin-top: 20px;
+  margin: 20px;
   padding: 20px;
   border-radius: 10px;
-  display: inline-block;
+  display: inline-flex;
   justify-content: center;
-      .restaurant-name {
-        display: none;
+    .restaurant-name {
+      display: none;
       }
-}
+      .info {
+        display: inline-block;
+        line-height: 30px;
+      }
+  }
