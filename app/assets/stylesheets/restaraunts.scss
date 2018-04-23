@@ -1,6 +1,9 @@
 // Place all the styles related to the Restaraunts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ $offwhite: #F8F8F0;
+
+
 .restaurant {
   display: flex;
   flex-flow: wrap;
@@ -12,10 +15,14 @@
 }
 
 .restaurant-name {
-  background-color: green;
-  overflow-x: auto;
+  background: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
   position: absolute;
-  top: 20px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
   z-index: 100;
 }
 

@@ -1,19 +1,22 @@
-<h1>These are your reservations</h1>
-<p>You have <%= @user.loyalty_points %> loyalty points!</p>
-<% @reservations.each do |reservation| %>
-  <div class="reservation">
-    <ul>
-      <li>Restaurant <%= reservation.restaurant_name %></li>
-      <li>Date: <%= reservation.date  %></li>
-      <li>Time: <%= reservation.time %></li>
-      <li>Party size: <%= reservation.number_of_people %></li>
-      <li>Neighbourhood: <%= reservation.restaurant.neighbourhood %></li>
-      <li><%= link_to "#{reservation.restaurant.restaurant_name}", "http://#{reservation.restaurant.restaurant_url}" %></li>
-    </ul>
-    <% end %>
-  </div>
+<div class="reservation">
+  <p><strong>Hello <%= current_user.first_name %>!</strong></p>
 
-  <div class="customers_with_most_points">
+  <h2 style="text-decoration:underline">These are your reservations</h2>
+  <% @reservations.each do |reservation| %>
+      <ul>
+        <li>Restaurant: <strong><%= reservation.restaurant_name %></strong></li>
+        <li>Date: <%= reservation.date  %></li>
+        <li>Time: <%= reservation.time %></li>
+        <li>Party size: <%= reservation.number_of_people %></li>
+        <li>Neighbourhood: <%= reservation.restaurant.neighbourhood %></li>
+        <li><strong><%= link_to "#{reservation.restaurant.restaurant_name}", "http://#{reservation.restaurant.restaurant_url}" %><strong></li>
+      </ul>
+      <% end %>
+    </div>
+  </br>
+  <hr>
+</div>
+  <!-- <div class="customers_with_most_points">
     <p>Customers ordered by loyalty points:</p>
       <ul>
         <% @customers.each do |customer| %>
@@ -23,4 +26,4 @@
           </li>
         <% end %>
       </ul>
-  </div>
+  </div> -->
