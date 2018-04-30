@@ -1,4 +1,4 @@
-<h1>SeatYourself Login</h1>
+<h1>Login</h1>
 
 <%= form_for :session, url: sessions_path do |f| %>
 
@@ -12,6 +12,8 @@
     <%= f.password_field :password %>
   </div>
 
-  <%= f.submit 'Login' %>
+  <div class="button">
+    <%= f.submit 'Login', :class => "button" %>
+  </div>
 
 <% end %>

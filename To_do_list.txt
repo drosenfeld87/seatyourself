@@ -1,9 +1,0 @@
-March 7, 2018
-5. Add edit/destroy methods for reservations
-6. Add restaurant validations
-
-Done
-1. Add seed data
-2. Add restaurant/reservation data associations
-3. Add list of restaurants to bottom of reservation.new.html.erb
-4. Add restaurant show page and reservation form

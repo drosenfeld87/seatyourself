@@ -1,0 +1,6 @@
+<h1 id="featured">Featured Restaurants</h1>
+  <div class="all-restaurants">
+      <% @restaurants.each do |restaurant| %>
+        <%= render '/restaurants/restaurant', restaurant: restaurant %>
+      <% end %>
+  </div>

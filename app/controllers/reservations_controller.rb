@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
     @reservation.restaurant = Restaurant.find_by(restaurant_name: params[:reservation][:restaurant_name])
-    @reservation.user = params[:reservation][:email]
+    @reservation.user = User.find_by(email:params[:reservation][:email])
 
     if @reservation.save
       flash[:alert] = "Congratulations! Your email confirmation is on the way. Here are the details:"

@@ -1,12 +1,12 @@
-<div class="restaurant">
-  <p><%= link_to(image_tag(restaurant.url), restaurant_path(restaurant)) %> </p>
-  <strong><p><%= restaurant.restaurant_name %></p></strong>
-  <p>Open: <%= restaurant.hours_open %></p>
-  <p>Close: <%= restaurant.hours_closed %></p>
-  <p>Capacity: <%= restaurant.capacity %></p>
-  <p>Address: <%= restaurant.address %></p>
-  <p>Neighbourhood: <%= restaurant.neighbourhood %></p>
-  <p>Price Range: <%= restaurant.price_range %></p>
-  <p>Summary: <%= restaurant.summary %></p>
-  <p>Restaurant URL: <%= link_to "#{restaurant.restaurant_name}", "http://#{restaurant.restaurant_url}" %></p>
-  <hr>
+<div class="indRest">
+  <%= link_to(image_tag(restaurant.url), restaurant_path(restaurant)) %>
+  <h4 class="restaurant-name"><%= link_to(restaurant.restaurant_name, restaurant_path(restaurant)) %></h4>
+</div>
+  <p class="info">Open: <%= restaurant.hours_open %></br>
+  Close: <%= restaurant.hours_closed %></br>
+  Capacity: <%= restaurant.capacity %></br>
+  Address: <%= restaurant.address %></br>
+  Neighbourhood: <%= restaurant.neighbourhood %></br>
+  Price Range: <%= restaurant.price_range %></br>
+  Summary: <%= restaurant.summary %></br>
+  Website: <%= link_to "#{restaurant.restaurant_name}", "http://#{restaurant.restaurant_url}" %></p>

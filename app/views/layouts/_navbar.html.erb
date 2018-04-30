@@ -1,0 +1,40 @@
+<div class="navbar">
+
+  <div class="logo">
+    <%= link_to "Seat Yourself", root_path %>
+  </div>
+
+    <div class="nav-links">
+      <% if current_user %>
+        <strong>Hello <%= current_user.first_name %>!</strong>
+        <span class="navbar-divider">|</span>
+        <%= link_to 'Logout', sessions_path, method: :delete %>
+        <span class="navbar-divider">|</span>
+        <%= link_to 'Add Restaurant', new_restaurant_path %>
+        <span class="navbar-divider">|</span>
+        <%= link_to 'My Profile', users_reservations_path %>
+        <span class="navbar-divider">|</span>
+        <%= link_to 'My Restaurants', users_path %>
+
+
+      <% else %>
+        <%= link_to 'Sign Up', new_users_path %>
+        <span class="navbar-divider">|</span>
+        <%= link_to 'Sign In', new_sessions_path %>
+      <% end %>
+  </div>
+
+</div>
+
+  <% if flash[:notice] %>
+   <p class=“notice”><%= flash[:notice] %></p>
+ <% end %>
+
+ <% if flash[:alert] %>
+   <p class=“alert”><%= flash[:alert] %></p>
+   <p class=“alert”><%= flash[:alert1] %></p>
+   <p class=“alert”><%= flash[:alert2] %></p>
+   <p class=“alert”><%= flash[:alert3] %></p>
+   <p class=“alert”><%= flash[:alert4] %></p>
+ <% end %>
+ <div>

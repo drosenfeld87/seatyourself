@@ -1,3 +1,73 @@
 // Place all the styles related to the Restaraunts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ $offwhite: #F8F8F0;
+
+
+.restaurant {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+    p {
+      display: block;
+      padding: 10px;
+    }
+}
+
+
+.restaurant-name {
+  background: white;
+  opacity: 0.8;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.indRest {
+  position: relative;
+  padding-right: 30px;
+}
+
+#featured {
+  display: flex;
+  justify-content: center;
+}
+
+.all-restaurants {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+      p {
+        display: none;
+      }
+  }
+
+.rest-name-show {
+  display: block;
+  padding: 20px 20px 0;
+  margin: 0 auto;
+
+}
+
+.restaurant-show {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+    .restaurant-name {
+      display: none;
+      }
+      .info {
+        display: inline-block;
+        line-height: 30px;
+      }
+  }

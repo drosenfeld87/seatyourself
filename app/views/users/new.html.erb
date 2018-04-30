@@ -1,4 +1,4 @@
-<h1>SeatYourself Sign Up</h1>
+<h1>Sign Up</h1>
 
 <% if @user.errors.any? %>
   <ul>
@@ -9,6 +9,16 @@
 <% end %>
 
 <%= form_for @user do |f| %>
+
+  <div class='field'>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
 
   <div class='field'>
     <%= f.label :email %>
@@ -25,6 +35,8 @@
     <%= f.password_field :password_confirmation %>
   </div>
 
-  <%= f.submit 'Sign Up' %>
+  <div class="button">
+    <%= f.submit 'Sign Up', :class => "button"%>
+  </div>
 
 <% end %>

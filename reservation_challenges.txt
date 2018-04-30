@@ -1,3 +1,0 @@
-1. If the restaurant is closed, you can't make a reservation
-2a. If the restaurant is at capacity, you can't make a reservation
-2b. If the restaurant's remaining seats is smaller than party size, you can't make a reservation
