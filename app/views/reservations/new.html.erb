@@ -11,7 +11,7 @@
 
         <p>
           <%= f.hidden_field :restaurant_name %>
-          <%= f.text_field :restaurant_name, placeholder: "Restaurant" %>
+          <%= collection_select(@table, :restaurants, Restaurant.all.order(:restaurant_name), :restaurant_name, :restaurant_name) %>
         </p>
 
         <p>
@@ -21,8 +21,8 @@
 
         <p>
           <%= f.hidden_field :time %>
-          <%= f.number_field :time, placeholder: "Time" %>
-        </p>
+          <%= f.number_field :time, placeholder: "Time", min: 17, max: 23, id:"time-field"%>
+          </p>
 
         <p>
           <%= f.hidden_field :number_of_people %>
