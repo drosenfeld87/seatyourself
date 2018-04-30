@@ -78,7 +78,7 @@ class RestaurantsController < ApplicationController
   end
 
   def ensure_user_owns_restaurant
-    unless current_user == @restaurant.user
+    unless current_user == @restaurant.owner
       flash[:alert] = "You are not the owner of this restaurant, please log in with correct ID."
       redirect_to new_sessions_path
     end
