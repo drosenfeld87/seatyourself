@@ -19,6 +19,7 @@
       </div>
     <% end %>
 
+<div id="reserv-show-form">
 
   <%= form_for(@reservation) do |f| %>
     <%= f.hidden_field :restaurant_name, :value => @restaurant.restaurant_name %>
@@ -47,5 +48,7 @@
     </div>
 
       <% end %>
+
+</div>
 
 </div>

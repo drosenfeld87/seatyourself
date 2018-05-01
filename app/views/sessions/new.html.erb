@@ -1,19 +1,23 @@
 <h1>Login</h1>
 
-<%= form_for :session, url: sessions_path do |f| %>
+<div class="session-form">
 
-  <div class='field'>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
+  <%= form_for :session, url: sessions_path do |f| %>
 
-  <div class='field'>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
+    <div class='field'>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
 
-  <div class="button">
-    <%= f.submit 'Login', :class => "button" %>
-  </div>
+    <div class='field'>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
 
-<% end %>
+    <div class="button">
+      <%= f.submit 'Login', :class => "button" %>
+    </div>
+
+  <% end %>
+
+</div>
