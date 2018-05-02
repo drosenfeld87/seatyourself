@@ -43,4 +43,5 @@ group :development do
   gem 'spring'
   gem 'awesome_print'
   gem 'pry-rails'
+  gem 'rails_12factor'
 end
