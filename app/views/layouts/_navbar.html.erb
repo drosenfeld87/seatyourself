@@ -37,4 +37,21 @@
    <p class=“alert”><%= flash[:alert3] %></p>
    <p class=“alert”><%= flash[:alert4] %></p>
  <% end %>
- <div>
+
+<div class="hamburger-menu">
+    <%= image_tag "icon.png", id: "hamburger-menu", class: "hamburger-menu"%>
+</div>
+
+<div class="dropdown-content">
+  <% if current_user %>
+    <%= link_to 'Logout', sessions_path, method: :delete %>
+    <%= link_to 'Add Restaurant', new_restaurant_path %>
+    <%= link_to 'My Profile', users_reservations_path %>
+    <%= link_to 'My Restaurants', users_path %>
+
+
+  <% else %>
+    <%= link_to 'Sign Up', new_users_path %>
+    <%= link_to 'Sign In', new_sessions_path %>
+  <% end %>
+</div>
