@@ -171,12 +171,16 @@ h1, h2, h3 {
       }
   }
 
+  .hero-image {
+    height: 30vh;
+  }
+
   #header {
     font-size: 1.2rem;
   }
 
   .logo a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .nav-links {
@@ -191,7 +195,7 @@ h1, h2, h3 {
   .hamburger-menu {
     z-index: 101;
     display: block;
-    top: 8%;
+    top: 3%;
     right: 4%;
     position: fixed;
       #hamburger-menu {
@@ -200,3 +204,5 @@ h1, h2, h3 {
       }
     }
   }
+
+  @media screen and (max-width: 767px) and (min-width: 325px)
