@@ -205,4 +205,203 @@ h1, h2, h3 {
     }
   }
 
-  @media screen and (max-width: 767px) and (min-width: 325px)
+  @media screen and (max-width: 767px) and (min-width: 425px) {
+
+    .new-reservation {
+      width: 60%;
+      height: 80%;
+        #new-reservation {
+          display: flex;
+        }
+    }
+
+    .hero-image {
+      height: 25vh;
+    }
+
+    #header {
+      font-size: 1rem;
+    }
+
+    .logo a {
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      visibility: hidden;
+    }
+
+    .dropdown-content {
+      position: fixed;
+      z-index: 100;
+    }
+
+    .hamburger-menu {
+      z-index: 101;
+      display: block;
+      top: 3%;
+      right: 7%;
+      position: fixed;
+        #hamburger-menu {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+    #reserve-button {
+      width: 125px;
+      height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 425px) {
+
+    .new-reservation {
+      width: 60%;
+      height: 80%;
+        #new-reservation {
+          display: flex;
+        }
+    }
+
+    .hero-image {
+      height: 25vh;
+    }
+
+    #header {
+      font-size: 1rem;
+    }
+
+    .logo a {
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      visibility: hidden;
+    }
+
+    .dropdown-content {
+      position: fixed;
+      z-index: 100;
+    }
+
+    .hamburger-menu {
+      z-index: 101;
+      display: block;
+      top: 3%;
+      right: 7%;
+      position: fixed;
+        #hamburger-menu {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+    #reserve-button {
+      width: 125px;
+      height: 30px;
+    }
+  }
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+
+  .new-reservation {
+    width: 60%;
+    height: 80%;
+      #new-reservation {
+        display: flex;
+      }
+    }
+
+  .hero-image {
+    height: 25vh;
+  }
+
+  #header {
+    font-size: 1rem;
+  }
+
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    visibility: hidden;
+  }
+
+  .dropdown-content {
+    position: fixed;
+    z-index: 100;
+  }
+
+  .hamburger-menu {
+    z-index: 101;
+    display: block;
+    top: 3%;
+    right: 7%;
+    position: fixed;
+      #hamburger-menu {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+  #reserve-button {
+    width: 125px;
+    height: 30px;
+  }
+
+  .info {
+    display: block;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 424px) and (min-width: 320px) {
+
+  .new-reservation {
+    width: 50%;
+    height: 60px;
+      #new-reservation {
+        display: flex;
+      }
+    }
+
+  .hero-image {
+    height: 25vh;
+  }
+
+  #header {
+    font-size: 1rem;
+  }
+
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    visibility: hidden;
+  }
+
+  .dropdown-content {
+    position: fixed;
+    z-index: 100;
+  }
+
+  .hamburger-menu {
+    z-index: 101;
+    display: block;
+    top: 3%;
+    right: 7%;
+    position: fixed;
+      #hamburger-menu {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+  #reserve-button {
+    width: 125px;
+    height: 30px;
+  }
+}
