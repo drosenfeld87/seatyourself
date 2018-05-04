@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
     @user = User.find(session[:user_id])
     @reservations = @user.reservations
     @customers = @user.customers
-    User.all.order()
+    # User.all.order()
   end
 
   def new
