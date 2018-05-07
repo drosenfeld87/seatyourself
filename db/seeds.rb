@@ -23,13 +23,13 @@ restaurant5 = Restaurant.create(restaurant_name: 'Terroni ADELAIDE', hours_open:
 
 Reservation.destroy_all
 reservations = Reservation.create([
-  {email: 'super@nova@gmail.com', restaurant_name: 'Reds Wine Tavern', date: Date.today + rand(30), time: 17, number_of_people: 2, restaurant_id: restaurant1.id, user_id: dmitry.id},
+  {email: 'super@nova@gmail.com', date: Date.today + rand(30), time: 17, number_of_people: 2, restaurant_id: restaurant1.id, user_id: dmitry.id},
 
-  {email: 'super@nova@gmail.com', restaurant_name: 'Reds Wine Tavern', date: Date.today + rand(30), time: 19, number_of_people: 4, restaurant_id: restaurant1.id, user_id: sean.id},
+  {email: 'super@nova@gmail.com', date: Date.today + rand(30), time: 19, number_of_people: 4, restaurant_id: restaurant1.id, user_id: sean.id},
 
-  {email: 'super@nova@gmail.com', restaurant_name: 'Katana on Bay', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant3.id, user_id: bill.id},
+  {email: 'super@nova@gmail.com', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant3.id, user_id: bill.id},
 
-  {email: 'super@nova@gmail.com', restaurant_name: 'Canoe Restaurant and Bar', date: Date.today + rand(30), time: 17, number_of_people: 2, restaurant_id: restaurant4.id, user_id: debbie.id},
+  {email: 'super@nova@gmail.com',  date: Date.today + rand(30), time: 17, number_of_people: 2, restaurant_id: restaurant4.id, user_id: debbie.id},
 
-  {email: 'super@nova@gmail.com', restaurant_name: 'Terroni ADELAIDE', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant5.id, user_id: alex.id},
+  {email: 'super@nova@gmail.com', date: Date.today + rand(30), time: 19, number_of_people: 2, restaurant_id: restaurant5.id, user_id: alex.id},
 ])

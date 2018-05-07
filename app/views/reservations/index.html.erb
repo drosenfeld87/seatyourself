@@ -4,7 +4,7 @@
   <h2 style="text-decoration:underline">These are your reservations</h2>
   <% @reservations.each do |reservation| %>
       <ul>
-        <li>Restaurant: <strong><%= reservation.restaurant_name %></strong></li>
+        <li>Restaurant: <strong><%= reservation.restaurant.restaurant_name %></strong></li>
         <li>Date: <%= reservation.date  %></li>
         <li>Time: <%= reservation.time %></li>
         <li>Party size: <%= reservation.number_of_people %></li>

@@ -17,7 +17,6 @@ class ReservationsController < ApplicationController
   def create
 
     @reservation.email = params[:reservation][:email]
-    # @reservation.restaurant_name = params[:reservation][:restaurant_name]
     @reservation.date = params[:reservation][:date]
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
@@ -26,7 +25,7 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       flash[:alert] = "Congratulations! Your email confirmation is on the way. Here are the details:"
-      flash[:alert1] = "Restaurant: #{@reservation.restaurant_name}"
+      flash[:alert1] = "Restaurant: #{@reservation.restaurant.restaurant_name}"
       flash[:alert2] = "Date: #{@reservation.date}"
       flash[:alert3] = "Time: #{@reservation.time}:00"
       flash[:alert4] = "Address: #{@reservation.restaurant.address}"

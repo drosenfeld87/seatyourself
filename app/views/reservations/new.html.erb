@@ -10,8 +10,6 @@
         </p>
 
         <p>
-          <%= f.hidden_field :restaurant_name %>
-
           <%= f.select(:restaurant_id) do %>
             <% Restaurant.all.order(:restaurant_name).each do |restaurant| %>
               <%= content_tag(:option, restaurant.restaurant_name, value: restaurant.id) %>
