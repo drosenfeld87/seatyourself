@@ -2,7 +2,7 @@ class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :restaurant
 
-  validates :email, :date, :time, :number_of_people, :restaurant_name, presence: true
+  validates :email, :date, :time, :number_of_people, presence: true
   validate :restaurant_hours
   validate :has_capacity
   validate :valid_date_and_time

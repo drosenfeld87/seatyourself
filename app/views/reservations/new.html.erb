@@ -11,7 +11,12 @@
 
         <p>
           <%= f.hidden_field :restaurant_name %>
-          <%= collection_select(@table, :restaurants, Restaurant.all.order(:restaurant_name), :restaurant_name, :restaurant_name) %>
+
+          <%= f.select(:restaurant_id) do %>
+            <% Restaurant.all.order(:restaurant_name).each do |restaurant| %>
+              <%= content_tag(:option, restaurant.restaurant_name, value: restaurant.id) %>
+            <% end %>
+          <% end %>
         </p>
 
         <p>

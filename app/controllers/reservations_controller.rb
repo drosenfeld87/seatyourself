@@ -17,11 +17,11 @@ class ReservationsController < ApplicationController
   def create
 
     @reservation.email = params[:reservation][:email]
-    @reservation.restaurant_name = params[:reservation][:restaurant_name]
+    # @reservation.restaurant_name = params[:reservation][:restaurant_name]
     @reservation.date = params[:reservation][:date]
     @reservation.time = params[:reservation][:time]
     @reservation.number_of_people = params[:reservation][:number_of_people]
-    @reservation.restaurant = Restaurant.find_by(restaurant_name: params[:reservation][:restaurant_name])
+    @reservation.restaurant = Restaurant.find(params[:reservation][:restaurant_id])
     @reservation.user = User.find_by(email:params[:reservation][:email])
 
     if @reservation.save
