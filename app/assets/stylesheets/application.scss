@@ -307,7 +307,7 @@ h1, h2, h3 {
 
   .new-reservation {
     width: 80%;
-    height: 80%;
+    height: 90%;
       #new-reservation {
         display: flex;
       }
@@ -355,7 +355,7 @@ h1, h2, h3 {
 @media screen and (max-width: 424px) and (min-width: 320px) {
 
   .new-reservation {
-    width: 80%;
+    width: 90%;
     height: 80%;
       #new-reservation {
         display: flex;
@@ -368,10 +368,11 @@ h1, h2, h3 {
 
   #header {
     font-size: 1rem;
+    padding: 5px;
   }
 
   .logo a {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   .nav-links {
@@ -386,8 +387,8 @@ h1, h2, h3 {
   .hamburger-menu {
     z-index: 101;
     display: block;
-    top: 3%;
-    right: 7%;
+    top: 4%;
+    right: 8%;
     position: fixed;
       #hamburger-menu {
         width: 30px;
@@ -398,6 +399,11 @@ h1, h2, h3 {
   #reserve-button {
     width: 125px;
     height: 30px;
+  }
+
+  #featured {
+      font-size: 1.5rem;
+      margin: 0 auto;
   }
 
 }
